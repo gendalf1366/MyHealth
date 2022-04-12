@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "656466040140",
+    "project_id": "myhealth-5286d",
+    "storage_bucket": "myhealth-5286d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656466040140:android:495c469b8a64dc0b926be9",
+        "android_client_info": {
+          "package_name": "ru.geekbrains.android2.myhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656466040140-skfqa7s7gm9g1bt22recc28dfg38un9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWoR-t_69uyQSnXv39EG9TkWdh8tomgIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656466040140-skfqa7s7gm9g1bt22recc28dfg38un9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
