@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">MyHealth</string>
+
+    <string name="exit">Exit</string>
+    <string name="logout_title">Log out?</string>
+    <string name="logout_message">Are you shure?</string>
+    <string name="logout_ok">Ok</string>
+    <string name="logout_cancel">Cancel</string>
+    <string name="cancel">CANCEL</string>
+    <string name="save">SAVE</string>
+    <string name="upper_blood_pressure">Upper blood pressure</string>
+    <string name="lower_blood_pressure">Lower blood pressure</string>
+    <string name="pulse">Pulse</string>
+    <string name="slash">/</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
 </resources>

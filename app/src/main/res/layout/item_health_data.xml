@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="ru.geekbrains.android2.myhealth.data.entity.HealthData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_date"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/date_background"
+            android:visibility="gone"
+            app:constraint_referenced_ids="top_line,tv_date"
+            app:layout_constraintBottom_toBottomOf="@id/medium_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <View
+            android:id="@+id/top_line"
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@{data.date}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/medium_line"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_data"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tv_time,tv_low_pressure, tv_up_pressure, tv_pulse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/medium_line"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/medium_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/tv_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@{data.time}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_up_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textSize="18sp"
+            android:text="@{data.upperBloodPressure}"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+            app:layout_constraintEnd_toStartOf="@+id/tv_slash"
+            app:layout_constraintTop_toTopOf="@+id/tv_time" />
+
+        <TextView
+            android:id="@+id/tv_low_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="18sp"
+            android:text="@{data.lowerBloodPressure}"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_slash"
+            app:layout_constraintStart_toEndOf="@+id/tv_slash"
+            app:layout_constraintTop_toTopOf="@+id/tv_slash" />
+
+        <ImageView
+            android:id="@+id/iv_heart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_low_pressure"
+            app:layout_constraintEnd_toStartOf="@+id/tv_pulse"
+            app:layout_constraintTop_toTopOf="@+id/tv_low_pressure"
+            android:tint="@color/grey"
+            app:srcCompat="@drawable/outline_favorite_24"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/tv_pulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textSize="14sp"
+            android:text="@{data.pulse}"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_heart" />
+
+        <TextView
+            android:id="@+id/tv_slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slash"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_up_pressure"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_up_pressure" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
